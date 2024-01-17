@@ -1,0 +1,34 @@
+// Countdown exercise code 
+
+function countDown(timer){
+    let countDown = setInterval(function(){
+        (timer--);
+        if (timer<=0){
+            clearInterval(countDown);
+            console.log("DONE!")
+        }
+        else{
+            console.log(timer)
+        }
+    },1000)
+}
+
+// Random game exercise code
+
+function randomGame(){
+    let attempts = 0
+    let num = 0
+    let time = setInterval(function(){
+        attempts++
+        num = Math.random();
+        if (.75< num){
+            if (attempts > 6){
+                console.log("Wow that took " + attempts + " tries! That is a ton!" );
+            }
+            else    
+                console.log("The number was over .75 in only " + attempts + " tries!");
+            clearInterval(time);
+        }
+    }
+    ,1000)
+}
